@@ -1,8 +1,26 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
+
+pictures = [
+    {
+        'Picture': 'Insert Image file here',
+        'description':  'This is what the painting means', 
+        'content': 'First picture made my Tala',
+        'date_posted': 'june 12, 1999'
+
+    }
+]
+
+
+
+
+
+# Views Rendered
 def home(request):
-    return render(request, 'store/home.html')
+    context = {
+        'pictures': pictures
+    }
+    return render(request, 'store/home.html', context)
 
 def about(request):
-    return HttpResponse ('<h1> Tala Paints | About</h1>')
+    return render(request, 'store/about.html')
