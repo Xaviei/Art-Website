@@ -4,6 +4,10 @@
     <title></title>
 </head>
 <body>
-    <h1>Store home!</h1>
+    {% for pictures in pictures %}
+        <h1>{{ pictures.picture }}</h1>
+        <p>by {{ pictures.artist }} on {{pictures.date_posted}} </p>
+        <p>{{ pictures.title }}</p>
+    {% endfor %}
 </body>
 </html>

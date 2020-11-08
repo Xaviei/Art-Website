@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+#dummydata
 pictures = [
     {
-        'Picture': 'Insert Image file here',
-        'description':  'This is what the painting means', 
-        'content': 'First picture made my Tala',
+        'picture': 'Insert Image file here',
+        'title':  'This is what the painting means', 
+        'artist': 'Tala',
         'date_posted': 'june 12, 1999'
 
     }
