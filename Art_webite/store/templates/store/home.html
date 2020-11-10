@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    {% for pictures in pictures %}
-        <h1>{{ pictures.picture }}</h1>
-        <p>by {{ pictures.artist }} on {{pictures.date_posted}} </p>
-        <p>{{ pictures.title }}</p>
-    {% endfor %}
-</body>
-</html>
+{% extends 'store/base.html' %}
+{% block content %}
+{% for pictures in pictures %} 
+    <h1>{{ pictures.picture }}</h1>
+    <p>by {{ pictures.artist }} on {{pictures.date_posted}} </p>
+    <p>{{ pictures.title }}</p>
+{% endfor %}
+{% endblock content %}
